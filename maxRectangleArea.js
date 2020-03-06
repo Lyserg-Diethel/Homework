@@ -36,14 +36,24 @@ let rectangles = {
 		'height': 20, 
 		'width': 20,
 	},
-
+	'findLargestRectangleMethod': function(){
+    let largestRectID;
+    let max = 0;
+    let compare;
+        
+         for(each in this){
+        compare = (this[`${each}`].height) * (this[`${each}`].width);
+            
+            if(compare > max) {
+            max = compare;
+            largestRectID = this[`${each}`].id;
+            }
+        }
+    return largestRectID;
+    }
 }
 
-function calcArea(rect){
-	return (this['height'] * this['width']);
-}
-
-let findLargestRectangle = function(rectangles){
+const findLargestRectangleFunction = function(rectangles){
     let largestRectID;
     let max = 0;
     let compare;
