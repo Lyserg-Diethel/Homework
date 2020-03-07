@@ -41,14 +41,14 @@ let rectangles = {
     let max = 0;
     let compare;
         
-         for(each in this){
+    for(each in this){
         compare = (this[`${each}`].height) * (this[`${each}`].width);
             
-            if(compare > max) {
-            max = compare;
-            largestRectID = this[`${each}`].id;
-            }
+        if(compare > max) {
+        max = compare;
+        largestRectID = this[`${each}`].id;
         }
+    }
     return largestRectID;
     }
 }
