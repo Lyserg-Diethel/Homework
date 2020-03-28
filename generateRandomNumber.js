@@ -6,8 +6,7 @@
 // Hint: използвайте Math.random() функцията за генериране на случайно число.
 
 function generateRandomNumber(start,end){
-    let randomNumber = Math.floor(Math.random() * (end - start + 1)) + start;
-        console.log(randomNumber);   
+    let randomNumber = Math.floor(Math.random() * (end - start + 1)) + start; 
 
     return randomNumber;
 }
