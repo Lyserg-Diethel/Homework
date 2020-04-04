@@ -30,10 +30,17 @@ const addTodo = function(){
 }
 
 const removeTodo = function(e){
+	let regex = /[0-9]+/;
 	if(e.target.tagName === 'I'){
 		e.target.parentElement.parentElement.remove();
-		console.log(e.target.tagName);
 		output.textContent = todoListUL.childElementCount;
+
+		for(let i = 0; i<todoListUL.childElementCount; i+=1){
+			let itemLabel = todoListUL.children[i].children[0].textContent;
+			let matchHolder = itemLabel.match(regex);
+			todoListUL.children[i].children[0].textContent = itemLabel.replace(matchHolder, (i + 1));
+			
+		}
 	}
 }
 
