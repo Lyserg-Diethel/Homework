@@ -26,6 +26,7 @@ const addTodo = function(){
 	newDiv.appendChild(newI);
 	newI.classList.add('far', 'fa-trash-alt');
 
+	todoTextInputField.value = '';
 	output.textContent = todoListUL.childElementCount;
 }
 
