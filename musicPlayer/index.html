@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Music Player App</title>
+</head>
+
+<body>
+    <section class="page">
+        <header>Music Player App</header>
+        <main>
+           
+          <div class="songsListHolder">
+            <div class='radioButtons'>
+                <label for='all'>All:</label>
+                <input type="radio" id='all' name="genre" class='radioBtn' checked="">
+
+                <label for='classical'>Classical:</label>
+                <input type="radio" id='classical' name="genre">
+
+                <label for='rock'>Rock:</label>
+                <input type="radio" id='rock' name="genre">
+
+                <label for='newWave'>New Wave:</label>
+                <input type="radio" id='newWave' name="genre">
+            </div>
+              <ul class='songsList'>
+
+                  <li class='all classical' data-track_length='3:19'>
+                    <span>Antonio Vivaldi - The Four Seasons, Op. 8, "Spring", Allegro</span>
+                  </li>
+
+                  <li class='all classical' data-track_length='5:01'>
+                    <span>Richard Wagner - The Valkyrie: Ride of the Valkyries</span>
+                  </li>
+
+                  <li class='all rock' data-track_length='3:52'>
+                    <span>AC/DC - Dirty Deeds Done Dirt Cheap</span>  
+                  </li>
+
+                  <li class='all newWave' data-track_length='3:52'>
+                    <span>a-Ha - Take On Me</span>
+                  </li>
+
+                  <li class='all rock' data-track_length='5:40'>
+                    <span>Deep Purple - Smoke on the Water</span>
+                  </li>
+
+                  <li class='all classical' data-track_length='4:30'>
+                    <span>Frédéric Chopin - Nocturne No.2 In E-Flat Major, Op. 9</span>
+                  </li>
+
+                  <li class='all newWave' data-track_length='7:27'>
+                    <span>Blue Monday - New Order</span>
+                  </li>
+
+                  <li class='all newWave' data-track_length='3:39'>
+                    <span>Transmission - Joy Division</span>
+                  </li>
+
+                  <li class='all rock' data-track_length='4:39'>
+                    <span>Nirvana - Smells Like Teen Spirit</span>
+                  </li>
+
+                  <li class='all newWave' data-track_length='4:43'>
+                    <span>A Forest - The Cure</span>
+                  </li>
+
+                  <li class='all classical' data-track_length='49:01'>
+                    <span>Gustav Holst - The Planets, Op. 32</span>
+                  </li>
+
+              </ul>
+          </div>
+          <div class="totalLength">Total track length: <span class="lengthOutput"></span></div>
+            
+        </main>
+        <footer></footer>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

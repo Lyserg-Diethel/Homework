@@ -1,0 +1,62 @@
+header{
+	text-align: center;
+	padding: 1vh;
+	background-color: #644;
+}
+
+body{
+	color:white;
+	background-color: #352525;
+}
+
+.totalLength{
+	font-size: 3vw;
+	margin-top: 5vh;
+	text-align: center;
+}
+
+.radioButtons *{
+	padding-left: 2vw;
+	border-left: 1px solid black;
+	margin: 1vh 0;
+}
+
+.songsListHolder{
+	margin: auto;
+	padding: 0 30vw;
+	border: 1px solid black;
+	
+}
+
+.songsListHolder li{
+	padding: 1vh;
+	transition: .2s;
+}
+
+.songsListHolder>ul>li:hover{
+	background-color: hotpink;
+}
+
+ul li::before {
+  content: "\25B6";
+  font-weight: bold;
+  display: inline-block; 
+  width: 1em;
+  margin-left: -1em;
+}
+
+ul li[class*='rock']::before{
+	color:#f0f;
+}
+
+ul li[class*='classical']::before{
+	color:turquoise;
+}
+
+ul li[class*='newWave']::before{
+	color:#b6b;
+}
+
+.hidden{
+	display: none;
+}
