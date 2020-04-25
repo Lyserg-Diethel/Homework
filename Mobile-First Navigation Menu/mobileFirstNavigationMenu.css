@@ -1,0 +1,60 @@
+body{
+	margin:0;
+}
+.item:hover{
+	background-color: #333;
+	color:white;
+}
+
+@media(max-width: 800px){
+	.menuBar{
+		font-size: 4vw;	
+		display: block;
+		line-height: 2em;
+		border-radius: 5px;
+		background-color: #AAA;	
+
+	}
+	.menuBar::after{
+		content: '▼';
+		float: right;
+		padding-right: 10px;
+	}
+	.menuBar:active{
+
+	}
+	.item{
+		font-size: 4vw;
+		margin: 0 auto; /*CHANGE/REMOVE WHEN MEDIA QUERY IS APPLIED*/
+		border-top: 1px solid #555;
+		line-height: 2em;
+	}
+}
+
+@media(min-width: 800px){
+	.menuBar{
+		text-align: center;
+		font-size: 4vw;
+		background-color: inherit;
+		width:80%;
+		margin: 0 auto;
+	}
+	.menuBar::before{
+		content: 'The ';
+	}
+	.menuBar::after{
+		content: ' in a desktop';
+	}
+	.itemContainer{
+		width:80%;
+		margin: 0 auto;
+	}
+	.item{
+		font-size: 3vw;
+		padding: 0 1vw;
+		border: 1px solid #555;
+		line-height: 2em;
+		display: inline-block;
+		margin: 0 10%;
+	}
+}
