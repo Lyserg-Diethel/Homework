@@ -22,6 +22,7 @@ i{
     overflow: auto;
 }
 .cartProducts{
+    width: 80%;
     float:right;
     color:white;
     margin-right:20px;
@@ -72,6 +73,17 @@ h1.order-title{
     color: #F00;
     cursor: pointer;
 }
+.product::after{
+    content: attr(data-after-content);
+    position: relative;
+    float: right;
+    font-size: 2em;
+    line-height: 1em;
+
+    color:#FFF;
+    background-color: black;
+    border-radius: 100px;
+}
 .product-title{
     font-family:Castellar;
 }
@@ -103,7 +115,11 @@ h1.order-title{
 }
 
 
-.inCart{
+.atLeastOneInCart{  /*unneeded. to remove if I don't decide to go back to it.*/
     opacity:0.5;
+}
+
+.inCart{
+    width:4em;
 }
 
