@@ -8,7 +8,6 @@ let storeObjStorage = [];
 
 fetch("https://raw.githubusercontent.com/ProgressBG-WWW-Courses/JavaScript-Advanced/gh-pages/downloads/products.json")
 .then(function(response) {
-	responseText = response.text;
 	return response.text();
 })
 .then(function(retRespText){
@@ -40,7 +39,7 @@ const CreateAndFillTile = function(obj, targetLocation = bodyVar){
 	newTile.appendChild(newPriceHolder);
 	targetLocation.appendChild(newTile);
 
-	newTile.objPointer = JSON.parse(JSON.stringify(obj));	//TESTING: can I avoid passing them via reference.
+	newTile.objPointer = JSON.parse(JSON.stringify(obj));
 	newTile.dataset.afterContent = '0';
 	if(targetLocation !== bodyVar){
 		newTile.classList.add('inCart'); //Allows increment/decrement, depending on where you're clicking on it.
@@ -56,7 +55,7 @@ const CreateAndFillTile = function(obj, targetLocation = bodyVar){
 const ShoppingCartInteractionHandler = function(){
 	const productID = this.objPointer.id;
 	/*TODO: CONSIDER SEPARATING THESE INTO SEPARARE FUNCTIONS TO IMPROVE CODE CLARITY.*/
-	if(findItemInCart(productID)){	//change to target via te .inCart true or false property?
+	if(findItemInCart(productID)){	//change to target via the .inCart true or false property?
 		if(this.classList.contains('inCart')){	//if you're clicking on the item in the cart.
 			if((+this.dataset.afterContent - 1) >= 0){
 				this.dataset.afterContent = +(this.dataset.afterContent) - 1;
@@ -64,7 +63,7 @@ const ShoppingCartInteractionHandler = function(){
 			}
 			if((+this.dataset.afterContent) <= 0){
 				cartProducts.removeChild(this);
-				cartObjStorage.splice(cartObjStorage.indexOf(this), 1)//TESTING HERE
+				cartObjStorage.splice(cartObjStorage.indexOf(this), 1)
 			}
 
 		}else if(this.classList.contains('inStore')){
@@ -104,7 +103,7 @@ const findItemInStore = function(id){
 //const addToCart = function(item){}
 const calculateTotal = function(){
 	let total = 0;
-	for(let item of cartObjStorage){ //Make sure to multipy by ammount.
+	for(let item of cartObjStorage){ 
 		total += (item.objPointer.price * item.dataset.afterContent);
 	}
 	totalSumSpan.textContent = `Total price before VAT: ${total}`;
