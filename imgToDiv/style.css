@@ -1,0 +1,47 @@
+.fakeImgDiv{
+   min-width: 250px;
+   margin: 10px;
+   margin-top: 40px;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+}
+.darkGreen{
+    background-color: #007000;
+}
+.darkGreen .fakeImgText{
+    color: white;
+}
+.lightGreen{
+    background-color: #409040;
+}
+.headerContainer{
+    width:100%;
+    text-align: center;
+}
+.imgHeader{
+    margin: auto auto;
+    margin-top: 23%;
+    padding: 5px 10px;
+    background-color: darkgoldenrod;
+    text-align: center;
+    width:min-content;
+}
+.topImg{
+    max-width: 30%;
+    margin: auto auto;
+    position: absolute;
+    left:35%;
+    top:-40px;
+    -webkit-box-shadow: 0px 5px 8px 0px rgba(0,0,0,1);
+    -moz-box-shadow: 0px 5px 8px 0px rgba(0,0,0,1);
+    box-shadow: 0px 5px 8px 0px rgba(0,0,0,1);
+}
+.topImg img{
+    max-width: 100%;
+    
+}
+.fakeImgText{
+    padding: 5px 10px;
+}
